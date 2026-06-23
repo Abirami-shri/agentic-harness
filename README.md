@@ -55,7 +55,13 @@ cp .env.example .env        # then fill in Box + Foundry values
 ```
 
 Auth for Foundry: either `az login` (Entra, recommended) or set
-`AZURE_AI_PROJECT_API_KEY`. Box: set `BOX_API_TOKEN` (or the CCG variables).
+`AZURE_AI_PROJECT_API_KEY`.
+
+Auth for Box: set `BOX_API_TOKEN` (a developer token — note these **expire ~60 min**,
+so regenerate when the connector returns 401). The CCG variables
+(`BOX_CLIENT_ID` / `BOX_CLIENT_SECRET` / `BOX_ENTERPRISE_ID`) only work for an app
+using **Server Authentication (CCG)** authorized in a Box **enterprise** admin
+console — they are not available on free/personal Box accounts.
 
 ## Deploy the agent to Foundry
 
