@@ -68,8 +68,8 @@ python deploy_foundry.py            # create/update the agent; writes .foundry_a
 
 ```bash
 python harness.py "summarize 'DIS-Switch Port Config.pdf' from Box"
-python harness.py "who is assigned what in my standup notes?"
-python harness.py "get details for ticket DIS-1423"
+python harness.py "who is assigned what in My Box Notes?"
+python harness.py "get details for ticket PDA-2789"
 python harness.py                   # interactive REPL
 ```
 
@@ -78,7 +78,7 @@ python harness.py                   # interactive REPL
 ```bash
 python skill_runtime.py                       # list discovered tool schemas
 python connectors/box_connector.py whoami     # verify Box auth
-python skills/box-ticket-lookup/run.py DIS-1423
+python skills/box-ticket-lookup/run.py PDA-2789
 ```
 
 ## Hosting the tool executor (optional)
