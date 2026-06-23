@@ -79,6 +79,19 @@ python harness.py "get details for ticket PDA-2789"
 python harness.py                   # interactive REPL
 ```
 
+## Testing in the Foundry Playground
+
+The Foundry Agent **Playground only tests the agent's reasoning** — it shows the
+agent selecting the right tool and arguments, then **pauses at "requires action"**.
+That's expected: the skills are *client-side function tools*, so their code
+(`box_connector.py`) executes in `harness.py`, not in Foundry — the portal has
+nothing to run them with. Use the Playground to verify tool routing; use
+`harness.py` to get real answers.
+
+To make the skills run natively in the Playground, expose them as a server-side
+**OpenAPI tool** (host the skills over HTTP and register an OpenAPI tool instead of
+function tools) — see "Hosting the tool executor" below.
+
 ## Test a skill / the connector in isolation (no Foundry needed)
 
 ```bash
