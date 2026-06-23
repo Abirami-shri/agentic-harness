@@ -1,0 +1,14 @@
+{
+  "name": "get_ticket_details",
+  "description": "Look up the details of a ticket by its ticket ID using the Box connector. Searches Box for the ticket (by ID appearing in the file name, content, or metadata) and returns its details: name, owner, metadata fields, and a content excerpt. Use this whenever the user asks about a specific ticket ID.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "ticket_id": {
+        "type": "string",
+        "description": "The ticket identifier to look up, e.g. 'DIS-1423' or 'TICKET-88'."
+      }
+    },
+    "required": ["ticket_id"]
+  }
+}

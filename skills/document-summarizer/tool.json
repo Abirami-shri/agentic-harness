@@ -1,0 +1,14 @@
+{
+  "name": "summarize_document",
+  "description": "Fetch a document or notes from Box and return its full text so it can be summarized. Use this when the user asks to summarize, recap, or digest a file stored in Box. Accepts a Box file ID, an exact file name, or keywords to search for.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "file": {
+        "type": "string",
+        "description": "Box file ID (digits only), exact file name, or keywords identifying the document/notes to summarize."
+      }
+    },
+    "required": ["file"]
+  }
+}

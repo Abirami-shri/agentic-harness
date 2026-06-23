@@ -1,0 +1,7 @@
+# Core harness
+python-dotenv>=1.0.0
+requests>=2.31.0          # Box REST connector
+
+# Azure AI Foundry Agent Service (the agent's reasoning runs here)
+azure-ai-agents>=1.1.0
+azure-identity>=1.17.0

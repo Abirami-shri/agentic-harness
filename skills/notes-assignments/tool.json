@@ -1,0 +1,18 @@
+{
+  "name": "list_notes_assignments",
+  "description": "Fetch notes from Box and return their text so action items / tasks assigned to people can be extracted. Use this when the user asks who is assigned what, what's on someone's plate, or for the action items / to-dos from a set of notes. Optionally narrow to one person.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "notes": {
+        "type": "string",
+        "description": "Box file ID (digits only), exact file name, keywords, or a folder name identifying the notes."
+      },
+      "person": {
+        "type": "string",
+        "description": "Optional. A person's name to filter assignments to. Omit to list assignments for everyone."
+      }
+    },
+    "required": ["notes"]
+  }
+}
